@@ -1,0 +1,133 @@
+.filter-container {
+    
+    display: flex;
+    align-items: center;
+    background: #d5b3ff;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+    color: #4a148c;
+    font-family: Arial, sans-serif;
+  
+    .filter-icon {
+      font-size: 3rem;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      span {
+        font-size: 2rem;
+        color: #6a1b9a;
+        img{
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: contain;
+        }
+      }
+    }
+  
+    .filters {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      h3 {
+        margin: 0;
+        font-weight: bold;
+      }
+  
+      .budget-filter {
+        display: flex;
+        gap: 10px;
+  
+        input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          width: 100px;
+          font-size: 1rem;
+          outline: none;
+  
+          &:focus
+          {
+            border-color: #6a1b9a;
+          }
+        }
+      }
+  
+      .category-filter {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+  
+        button {
+          background: #6a1b9a;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+  
+          &:hover {
+            background: #4a148c;
+          }
+        }
+  
+        select {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1rem;
+          outline: none;
+  
+          &:focus {
+            border-color: #6a1b9a;
+          }
+  
+          &:disabled {
+            background: #f0f0f0;
+            cursor: not-allowed;
+          }
+        }
+      }
+  
+      .mode-filter {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+  
+        label {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+  
+          input[type="radio"] {
+            accent-color: #6a1b9a;
+          }
+        }
+      }
+  
+      .apply-btn {
+        background: #4a148c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        align-self: flex-start;
+  
+        &:hover {
+          background: #6a1b9a;
+        }
+      }
+    }
+  }
+    
