@@ -1,168 +1,184 @@
-/* Base Navbar Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .navbar {
-    background-color: #f8f1e7; /* Light beige background */
+  background-color: #f8f1e7;
+  /* Light beige background */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 30px 50px 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 80px;
+
+  /* Logo */
+  &-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #7c3aed;
+    /* Purple color */
+    text-decoration: none;
+
+    &:hover {
+      color: #5b21b6;
+      /* Darker purple on hover */
+    }
+  }
+
+  /* Navigation Links */
+  &-links {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 30px 50px 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    height: 80px;
-  
-    /* Logo */
-    &-logo {
-      font-size: 40px;
-      font-weight: bold;
-      color: #7c3aed; /* Purple color */
+    gap: 1.5rem;
+
+
+    .navbar-item {
       text-decoration: none;
-  
-      &:hover {
-        color: #5b21b6; /* Darker purple on hover */
-      }
-    }
-  
-    /* Navigation Links */
-    &-links {
-      display: flex;
-      gap: 1.5rem;
-      
-  
-      .navbar-item {
-        text-decoration: none;
-        color: #4b5563; /* Gray text color */
-        font-weight: 500;
-               
-        hr{
-          height: 1px;
-          background-color: #7c3aed;
-          width: 0%;
-          transition: 0.2s all ease-in;
-        }
-  
-        &:hover {
-          color: #7c3aed; /* Purple on hover */
-          hr{
-            width: 100%;
-          }
-        }
-      }
-    }
-  
-    /* Search Bar */
-    &-search {
-      display: flex;
-      align-items: center;
-      position: relative;
-  
-      .search-input {
-        border: 1px solid #7c3aed;
-        border-radius: 999px; /* Fully rounded */
-        padding: 0.5rem 1rem;
-        outline: none;
-        width: 300px;
-        font-size: 1rem;
-  
-        &:focus {
-          box-shadow: 0px 0px 4px #7c3aed;
-        }
-      }
-  
-      .search-button {
-        position: absolute;
-        right: 10px;
-        background: none;
-        border: none;
-        color: #7c3aed;
-        font-size: 1.2rem;
-        cursor: pointer;
-        img{
-          width: 15px;
-          height: 15px;
-          object-fit: contain;
-        }
-      }
-    }
-  
-    /* Buttons Section */
-    &-buttons {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-  
-      .button {
-        border-radius: 999px;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        transition: all 0.2s;
-  
-        &.signin-button {
-          border: 1px solid #7c3aed;
-          color: #7c3aed;
-          background: none;
-  
-          &:hover {
-            background: rgba(124, 58, 237, 0.1);
-          }
-        }
-  
-        &.register-button {
-          background-color: #7c3aed;
-          color: #fff;
-          border: none;
-          .arrow{
-            font-weight: bolder;
-          }
-  
-          &:hover {
-            background-color: #5b21b6;
-          }
-        }
-  
-        &.profile-button {
-          background-color: #7c3aed;
-          color: #fff;
-          .arrow{
-            font-weight: bolder;
-          }
-  
-          &:hover {
-            background-color: #5b21b6;
-          }
-        }
-  
-        &.logout-button {
-          border: 1px solid #7c3aed;
-          color: #7c3aed;
-          background-color: transparent;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          img{
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-          }
-  
-          &:hover {
-            background: rgba(124, 58, 237, 0.1);
-          }
-        }
-      }
-  
-      .navbar-icon {
-        font-size: 2rem;
-        color: #7c3aed;
-        cursor: pointer;
-        img{
-          width: 32px;
-          height: 32px;
-          object-fit: contain;
-        }
+      color: #4b5563;
+      /* Gray text color */
+      font-weight: 500;
+
+      hr {
+        height: 1px;
+        background-color: #7c3aed;
+        width: 0%;
+        transition: 0.2s all ease-in;
         
-        &:hover {
-          color: #5b21b6;
+        border: 1.5px transparent;
+      }
+
+      &:hover {
+        color: #7c3aed;
+
+        /* Purple on hover */
+        hr {
+          width: 100%;
+          border: 5px #7c3aed;
         }
       }
     }
   }
-  
+
+  /* Search Bar */
+  &-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .search-input {
+      border: 1px solid #7c3aed;
+      border-radius: 999px;
+      /* Fully rounded */
+      padding: 0.5rem 1rem;
+      outline: none;
+      width: 300px;
+      font-size: 1rem;
+
+      &:focus {
+        box-shadow: 0px 0px 4px #7c3aed;
+      }
+    }
+
+    .search-button {
+      position: absolute;
+      right: 10px;
+      background: none;
+      border: none;
+      color: #7c3aed;
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      img {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  /* Buttons Section */
+  &-buttons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .button {
+      border-radius: 999px;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &.signin-button {
+        border: 1px solid #7c3aed;
+        color: #7c3aed;
+        background: none;
+
+        &:hover {
+          background: rgba(124, 58, 237, 0.1);
+        }
+      }
+
+      &.register-button {
+        background-color: #7c3aed;
+        color: #fff;
+        border: none;
+
+        .arrow {
+          font-weight: bolder;
+        }
+
+        &:hover {
+          background-color: #5b21b6;
+        }
+      }
+
+      &.profile-button {
+        background-color: #7c3aed;
+        color: #fff;
+
+        .arrow {
+          font-weight: bolder;
+        }
+
+        &:hover {
+          background-color: #5b21b6;
+        }
+      }
+
+      &.logout-button {
+        border: 1px solid #7c3aed;
+        color: #7c3aed;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+        }
+
+        &:hover {
+          background: rgba(124, 58, 237, 0.1);
+        }
+      }
+    }
+
+    .navbar-icon {
+      font-size: 2rem;
+      color: #7c3aed;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+
+      &:hover {
+        color: #5b21b6;
+      }
+    }
+  }
+}

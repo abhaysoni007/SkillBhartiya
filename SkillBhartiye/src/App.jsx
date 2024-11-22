@@ -1,23 +1,43 @@
 import React from "react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Navbar from "./Components/navbar/Navbar";
 import Filter from "./Components/filter/Filter";
-import ReviewCard from "./Components/reviewCard/ReviewCard";
 import Footer from "./Components/footer/Footer";
 import FreelancerCard from "./Components/freelancerCard/FreelancerCard";
-import TestimonialCard from "./Components/testimonialCard/TestimonialCard";
+// import BoxLayout from "./pages/BoxLayout/BoxLayout"; 
 import "./App.scss";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Filter />
-      <TestimonialCard />
-      <FreelancerCard />
-      <ReviewCard />
-      <Footer />
-    </>
-  );
+  const Layout = () => {
+    return (
+      <div className="app">
+          <Navbar />
+          <Outlet />
+          <Footer />
+      </div>
+    );
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <FreelancerCard/>,
+        },
+        {
+          path: "/filter",
+          element: <Filter />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
+
+
 
 export default App;
