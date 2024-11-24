@@ -1,0 +1,182 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(./public/bg.png); /* Background color */
+}
+
+.signup-card {
+  width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f6edec; // Foreground color
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #7743db; /* Title color */
+}
+
+p {
+  margin-bottom: 20px;
+  color: #7743db; /* Paragraph color */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 85%;
+    margin-left: 20px;
+
+    &:focus {
+      outline: none;
+      border-color: #8051f0;
+    }
+  }
+}
+
+.password-requirements {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-size: 12px;
+  color: #7743db;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align checkbox to the left */
+  margin-bottom: 20px;
+
+  input {
+    margin-right: 10px;
+  }
+
+  span {
+    color: #7743db; /* Checkbox label color */
+  }
+}
+
+button {
+  background-color: #7743db; /* Button background color */
+  color: #f7efe5; /* Button text color */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 300px;
+  max-width: 600px;
+  margin-bottom: 15px;
+  align-self: center;
+   /* Align button to the left */
+}
+
+button:hover {
+  background-color: #5a33a5; /* Darker hover color */
+}
+
+.link {
+  color: #7743db; /* Link color */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #7743db; /* Close button color */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .signup-card {
+    padding: 30px; /* Reduced padding for smaller screens */
+    width: 90%; /* Allow the card to use more of the available space */
+  }
+
+  .signup-card h2 {
+    font-size: 24px; /* Reduce title size */
+    margin-bottom: 15px;
+  }
+
+  .signup-card p {
+    font-size: 14px; /* Reduce text size for paragraphs */
+  }
+
+  .signup-card form {
+    align-items: center; /* Center form elements */
+  }
+
+  input {
+    max-width: 100%; /* Full width on small screens */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .password-requirements {
+    font-size: 10px; /* Smaller font size */
+  }
+
+  .checkbox-wrapper {
+    margin-bottom: 15px; /* Reduce space */
+  }
+
+  button {
+    max-width: 100%; /* Make button full width on smaller screens */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup-card {
+    padding: 20px; /* Further reduce padding on very small screens */
+  }
+
+  .signup-card h2 {
+    font-size: 20px; /* Further reduce heading size */
+  }
+
+  .signup-card p {
+    font-size: 12px; /* Further reduce paragraph text */
+  }
+
+  .signup-card form {
+    width: 100%; /* Ensure form is fully stretched */
+  }
+
+  input {
+    font-size: 12px; /* Adjust input font size */
+  }
+
+  .password-requirements {
+    font-size: 8px; /* Smaller password requirements */
+  }
+
+  .checkbox-wrapper {
+    font-size: 12px; /* Adjust checkbox text */
+  }
+
+  button {
+    font-size: 12px; /* Adjust button font size */
+  }
+}
