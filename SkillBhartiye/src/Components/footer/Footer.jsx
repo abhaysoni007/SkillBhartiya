@@ -29,7 +29,7 @@ const SkillBhartiyeBanner = ({ logo, title, description, socialLinks, aboutText 
 // Mock Data for Testing (Replace with Backend Data)
 const mockData = {
   logo: "./public/images/SkillBhartiye.jpeg", // Replace with the logo's URL
-  title: "SkillBhartiye",
+  title: "SkillBhartiya",
   description:
     "Welcome to SkillBhartiye, the ultimate platform for freelancers and employers! Whether you're a talented freelancer looking for your next gig or a business seeking skilled professionals, we connect you seamlessly. Post jobs, find opportunities, and collaborate with ease. Join us today and take your freelancing career or hiring process to the next level!",
   socialLinks: [

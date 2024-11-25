@@ -5,6 +5,7 @@ import Filter from "./Components/filter/Filter";
 import Footer from "./Components/footer/Footer";
 import FreelancerCard from "./Components/freelancerCard/FreelancerCard";
 import Login from "./pages/login/Login";
+import BidComponent from "./Components/BidComponent/BidComponent.jsx";
 import FreelancerPortfolio from "./pages/freelancerPortfolio/FreelancerPortfolio.jsx";
 // import BoxLayout from "./pages/BoxLayout/BoxLayout";
 import "./App.scss";
@@ -105,6 +106,8 @@ function App() {
         <Navbar />
         <Outlet />
         <Footer />
+        <BidComponent />
+
       </div>
     );
   };

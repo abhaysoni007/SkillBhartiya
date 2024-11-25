@@ -166,14 +166,14 @@ const FreelancerPortfolio = ({ freelancer }) => {
         <div className="photos">
           <h3>PHOTOS</h3>
           <Carousel
-            slidesToShow={3}
+            slidesToShow={4}
             slidesToScroll={2}
             autoPlay={false}
             interval={2000}
           >
             {freelancer.projectPhoto.map((img, index) => (
               <div key={index} className="photo">
-                <img src={img} alt={`Slide ${index + 1}`} />
+                <img src={img} alt={`Slide ${index + 1}` } width="200" height="200" />
               </div>
             ))}
           </Carousel>
