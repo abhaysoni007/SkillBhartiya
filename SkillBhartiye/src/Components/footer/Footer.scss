@@ -54,11 +54,13 @@
 
         a {
           display: inline-block;
+          background-color: transparent;
 
           img {
             width: 30px;
             height: 30px;
             transition: transform 0.3s;
+            object-fit: cover;
 
             &:hover {
               transform: scale(1.2);

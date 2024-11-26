@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap');
+
+.proposalCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 500px;
+    height: 250px;
+    // max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    border: 2px solid rgba(128, 128, 128, 0.722);
+    .proposal {
+        color: black;
+        height: 150px;
+        overflow-y: scroll; 
+        -ms-overflow-style: none;  
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    .price {
+        max-height: 35px;
+        font-family: "Parkinsans";
+        font-size: 25px;
+        text-align: right;
+        color: rgb(128, 128, 128);
+    }
+
+    .user {
+        display: flex;
+
+        .userImg {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+            }
+        }
+
+        .userName {
+            margin-left: 8px;
+
+            .date {
+                color: gray;
+            }
+        }
+    }
+
+}

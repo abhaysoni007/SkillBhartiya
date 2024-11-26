@@ -1,0 +1,88 @@
+.box-layout {
+  display: flex;
+  flex-direction: column;
+
+  .content-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e1dcdc;
+    height: 100%;
+  }
+
+  .ecommerce-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Two boxes per row
+    gap: 30px; // Space between boxes
+    justify-content: center; // Align items in the center
+    padding: 20px;
+    background-color: #e1dcdc;
+    width: 90%; // Center the grid container
+    margin: 0 auto;
+  }
+
+  .ecommerce-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; // Make the cards responsive within the grid
+    max-width: 600px; // Prevent cards from being too wide
+    height: 270px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; // Distribute content vertically
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      font-size: 1.5rem; // Adjusted for larger boxes
+      color: #5a2e8a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #5a2e8a;
+      margin-top: auto; // Push to the bottom
+    }
+
+    .skills {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .view-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #5a2e8a;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 15px;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #472b6a;
+      }
+    }
+  }
+}
