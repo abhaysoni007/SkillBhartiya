@@ -5,7 +5,6 @@ import "./FreelancerPortfolio.scss";
 import Slide from "../../Components/slide/Slide.jsx";
 import Carousel from "../../Components/corousel/Carousel.jsx";
 import ReviewCard from "../../Components/reviewCard/ReviewCard.jsx";
-import BrowseDifferentCategories from "../../Components/browseDifferentCategories/BrowseDifferentCategories.jsx";
 
 const FreelancerPortfolio = ({ freelancer }) => {
   const [activeSection, setActiveSection] = useState("");
@@ -219,7 +218,7 @@ const FreelancerPortfolio = ({ freelancer }) => {
           <img src="./images/chat.svg" alt="" />
         </div>
       </div>
-      <BrowseDifferentCategories />
+      <Slide/>
     </div>
   );
 };

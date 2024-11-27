@@ -174,7 +174,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <JobDescription {...jobDescriptionData} />,
+          element: <FreelancerPortfolio freelancer={freelancer} />,
         },
         {
           path: "/filter",
